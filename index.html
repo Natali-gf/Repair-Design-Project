@@ -8,56 +8,70 @@
 	<title>Document</title>
 </head>
 <body>
-	<div class="wrapper">
-		<header class="toolbar">
+	<header class="container">
+		<div class="toolbar container__toolbar">
 			<div class="toolbar__logo">
-				<span class="navigation-text toolbar__logo_text">
+				<a class="toolbar__logo_text" href="#" target="_self">
 					IC "Repair Design Project"
-				</span>
+				</a>
 			</div>
-			<nav class="navigation">
-				<ul>
-					<li class="navigation-link">HOME</li>
-					<li class="navigation-link">PROJECTS</li>
-					<li class="navigation-link">MEASUREMENT</li>
-					<li class="navigation-link">TEAM</li>
-					<li class="navigation-link">REVIEWS</li>
-					<li class="navigation-link">CONTACTS</li>
+			<nav>
+				<ul class="toolbar__navigation">
+					<li class="toolbar__navigation_link">
+						<a>Home</a>
+					</li>
+					<li class="toolbar__navigation_link">
+						<a>Projects</a>
+					</li>
+					<li class="toolbar__navigation_link">
+						<a>Measurement</a>
+					</li>
+					<li class="toolbar__navigation_link">
+						<a>Team</a>
+					</li>
+					<li class="toolbar__navigation_link">
+						<a>Reviews</a>
+					</li>
+					<li class="toolbar__navigation_link">
+						<a>Contacts</a>
+					</li>
 				</ul>
 			</nav>
 			<a class="toolbar__phone" href="tel:+7 (928) 768-32-39">
 				+7 (928) 768-32-39
 			</a>
 			<button class="button toolbar__button">
-				<span class="button-text">
 					Request a call
-				</span>
 			</button>
 		</div>
 	</header>
 	<main>
 		<section class="main-section">
-			<h1 class="main-section__title">
-				Turnkey Repair in the city of
-				<span class="main-section__title_gold">
-					Rostov-on-Don
-				</span>
-			</h1>
-			<p class="main-section__description">
-				Get ready-made turnkey repairs on time with work time saving up to 45 days and 20% from cost of materials due to the organization of work
-			</p>
-			<ul>
-				<li>
-					<button class="main-section__button">
-						CALCULATE THE COST
-					</button>
-				</li>
-				<li>
-					<button class="main-section__button">
-						SUBMIT YOUR APPLICATION
-					</button>
-				</li>
-			</ul>
+			<div class="main-section__blackout"></div>
+			<div class="main-section__content">
+				<h1 class="main-section__title">
+					Turnkey Repair in the city of
+					<span class="main-section__title_gold">
+						Rostov-on-Don
+					</span>
+				</h1>
+				<p class="main-section__description">
+					Get ready-made turnkey repairs on time with work time saving up to 45 days and 20% from cost of materials due to the organization of work
+				</p>
+				<ul class="main-section__button-block">
+					<li>
+						<button class="main-section__button">
+							Calculate the cost
+						</button>
+					</li>
+					<li>
+						<button class="main-section__button">
+							<span class="main-section__button_only-desktop"> Submit your </span>
+							application
+						</button>
+					</li>
+				</ul>
+			</div>
 		</section>
 
 	</main>

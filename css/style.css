@@ -1,52 +1,196 @@
-/* reset style */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-main, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
+@font-face {
+  font-family: "YesevaOne";
+  src: url(../fonts/YesevaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "NunitoSans";
+  src: url(../fonts/NunitoSans-Regular.ttf);
+}
+* {
   padding: 0;
+  margin: 0;
   border: 0;
-  vertical-align: baseline;
+  font-family: "NunitoSans", Arial, Helvetica, Verdana, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0em;
 }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "YesevaOne", Georgia, "Times New Roman", Times, serif;
 }
 
 ol, ul {
   list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-a:hover, a:active {
+a, a:hover, a:active, a:visited {
+  text-decoration: none;
   outline: none;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+.container {
+  background-color: #131313;
+  min-width: 320px;
+}
+.container__toolbar {
+  margin: 0 auto;
+}
+
+.toolbar {
+  height: 83px;
+  max-width: 1256px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+  padding: 0 17px 0 18px;
+}
+.toolbar__logo {
+  width: 275px;
+}
+.toolbar__logo_text {
+  color: #E3B873;
+}
+.toolbar__navigation {
+  color: white;
+  display: flex;
+  width: 572px;
+  justify-content: space-between;
+}
+.toolbar__navigation_link:hover {
+  color: #E3B873;
+  cursor: pointer;
+}
+@media (max-width: 1299px) {
+  .toolbar__navigation {
+    display: none;
+  }
+}
+.toolbar__phone {
+  display: flex;
+  color: #E3B873;
+  text-decoration: underline;
+  justify-content: flex-end;
+  width: 203px;
+}
+.toolbar__button {
+  height: 37px;
+  width: 161px;
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-left: 45px;
+}
+.toolbar__button:hover {
+  cursor: pointer;
+}
+@media (max-width: 1299px) {
+  .toolbar__button {
+    display: none;
+  }
+}
+
+.button {
+  background-color: #E3B873;
+  color: white;
+}
+
+.main-section {
+  display: flex;
+  height: 707px;
+  background-image: url(../images/main-image-background.png);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+}
+.main-section__blackout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .main-section {
+    background-image: url(../images/main-image-background-mobile.png);
+    height: 476px;
+  }
+}
+.main-section__content {
+  display: flex;
+  flex-direction: column;
+  width: 1170px;
+  padding-left: 18px;
+  padding-right: 17px;
+  margin: 200px auto auto;
+}
+@media screen and (max-width: 767px) {
+  .main-section__content {
+    margin: 85px 0;
+  }
+}
+.main-section__title {
+  max-width: 550px;
+  font-size: 40px;
+  line-height: 53px;
+  color: white;
+  text-transform: uppercase;
+}
+.main-section__title_gold {
+  color: #E3B873;
+  font-family: inherit;
+}
+@media screen and (max-width: 767px) {
+  .main-section__title {
+    font-size: 23px;
+    line-height: 30px;
+    max-width: 340px;
+  }
+}
+.main-section__description {
+  max-width: 505px;
+  font-size: 22px;
+  line-height: 36px;
+  color: white;
+  margin: 30px 0;
+}
+@media screen and (max-width: 767px) {
+  .main-section__description {
+    font-size: 23px;
+    line-height: 30px;
+    width: 100%;
+    padding-right: 20px;
+  }
+}
+.main-section__button-block {
+  display: flex;
+}
+.main-section__button {
+  width: 207px;
+  height: 51px;
+  font-size: 11px;
+  line-height: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-style: italic;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  margin-right: 20px;
+}
+.main-section__button:hover {
+  background-color: #E3B873;
+  box-shadow: 0px 5px 15px 0px rgba(227, 184, 115, 0.3019607843);
+  border-radius: 2px;
+  border: none;
+}
+@media screen and (max-width: 767px) {
+  .main-section__button_only-desktop {
+    display: none;
+  }
 }
