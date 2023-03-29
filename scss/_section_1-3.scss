@@ -1,6 +1,136 @@
 // todo __First section__ //
 
 .projects {
+	background-color: $background;
+	height: 1074px;
+	&__content {
+		display: grid;
+		grid-template: 69px 66px 162px 107px 107px 71px / 190px 302px 254.5px 169.5px 255px;
+		max-width: 1171px;
+		margin: 0 auto;
+	}
+
+	&__heading {
+		max-width: 200px;
+		grid-area: 2 / 1;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 27px;
+		color: $text-w;
+		&:nth-of-type(1) {
+			grid-area: 3 / 1 / 3 / 3;
+		}
+
+
+	}
+	&__text_size-less {
+		font-size: 13px;
+		line-height: 21px;
+		color: $text-w;
+		&:nth-of-type(2) {
+			grid-area: 4 / 1;
+		}
+		&:nth-of-type(3) {
+			grid-area: 4 / 2;
+		}
+		&:nth-of-type(4) {
+			grid-area: 5 / 1;
+		}
+		&:nth-of-type(5) {
+			grid-area: 5 / 2;
+		}
+	}
+	&__subtitle {
+		color: $gold;
+		&:nth-of-type(1) {
+			grid-area: 4 / 1;
+		}
+		&:nth-of-type(2) {
+			grid-area: 4 / 2;
+		}
+		&:nth-of-type(3) {
+			grid-area: 5 / 1;
+		}
+		&:nth-of-type(4) {
+			grid-area: 5 / 2;
+		}
+	}
+
+	&__arrows  {
+		&:nth-of-type(1) {
+			grid-area: 6 / 1 / 6 / 3;
+			align-self: end;
+		}
+		& circle:hover {
+			fill: white;
+		}
+	}
+
+	&__tabs {
+	}
+}
+.heading_big {
+	font-size: 27px;
+	line-height: 37px;
+	color: $gold;
+}
+
+.subtitle{
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.tabs {
+	// &:nth-of-type(2) {
+	// 	grid-area: 1 / 3;
+	// }
+	&:nth-of-type(3) {
+		grid-area: 1 / 4;
+	}
+	// &:nth-of-type(3) {
+	// 	grid-area: 5 / 1;
+	// }
+
+	&__name {
+		font-size: 14px;
+		line-height: 19px;
+		color: #FFFFFF4D;
+		&:nth-of-type(5) {
+			grid-area: 1 / 3;
+		}
+		&:nth-of-type(6) {
+			grid-area: 1 / 4;
+		}
+		&:nth-of-type(7) {
+			grid-area: 1 / 5;
+		}
+		&:hover {
+			color: $gold;
+		}
+		&:focus {
+			color: $gold;
+			&::after {
+				content: '';
+				background: #E3B873;
+				height: 1px;
+				display: block;
+				width:initial;
+			}
+		}
+	}
+
+	&__image-block {
+		&:nth-of-type(2) {
+		grid-area: 2 / 3 / 6 / 6;
+	}
+	}
+}
+
+// todo __Second section__ //
+
+.control {
 
 	&__content {
 	}
@@ -8,33 +138,17 @@
 	&__heading {
 	}
 
+	&__movie {
+	}
+
 	&__text {
 	}
-
-	&__subtitle {
-	}
-
-	&__arrows {
-	}
-
-	&__tabs {
-	}
 }
-.heading-gold {
+.heading-section {
+	font-size: 20px;
+	line-height: 28px;
+	text-transform: uppercase;
 }
-.text {
-}
-.tabs {
-
-	&__name {
-	}
-
-	&__image-block {
-	}
-}
-
-// todo __Second section__ //
-
 
 
 // todo __Third section__ //

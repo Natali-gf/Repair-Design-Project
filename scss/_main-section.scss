@@ -20,7 +20,7 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
-		width: 1170px;
+		width: 1171px;
 		padding-left: 18px;
 		padding-right: 17px;
 		margin: 200px auto auto;
@@ -30,7 +30,7 @@
 	}
 	&__title {
 		max-width: 550px;
-		@include h-text (40px, 53px, $heading-w);
+		@include text (40px, 53px, $heading-w);
 		&_gold {
 			color: $gold;
 			font-family: inherit;
@@ -58,29 +58,33 @@
 		display: flex;
 		@media screen and (max-width: $maxw-mobile) {
 			display: grid;
-			grid-template-rows: 77px 77px;
+			grid-template-rows: repeat(2, 77px);
 		}
 	}
 	&__button {
 		width: 207px;
 		height: 51px;
-		@include h-text (11px, 15px, $text-w);
-		font-style: italic;
 		background-color: rgba(0, 0, 0, 0);
+		box-shadow: none;
 		border: 1px solid #FFFFFF;
-		border-radius: 2px;
 		margin: 0 20px 0 0;
 		&:hover {
-			background-color: #E3B873;
-			box-shadow: 0px 5px 15px 0px #E3B8734D;
-			border-radius: 2px;
+			background-color: $gold;
 			border: none;
+		}
+		&_only-desktop {
+			font-style: inherit;
 		}
 		@media screen and (max-width: $maxw-mobile) {
 			width: 100%;
 			&_only-desktop {
-			display: none;
-		}
+				display: none;
+			}
 		}
 	}
+}
+
+.heading {
+	font-family: "YesevaOne", Georgia, 'Times New Roman', Times, serif;
+	text-transform: uppercase;
 }

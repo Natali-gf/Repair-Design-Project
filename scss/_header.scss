@@ -43,15 +43,7 @@
 	&__button {
 		height: 37px;
 		width: 161px;
-		font-size: 11px;
-		line-height: 15px;
-		text-transform: uppercase;
-		font-style: italic;
 		margin-left: 45px;
-		&:hover {
-			cursor: pointer;
-			box-shadow: 0px 5px 15px 0px #E3B8734D;
-		}
 		@media (max-width: $maxw-ipad) {
 			display: none;
 		}
@@ -61,6 +53,16 @@
 .button {
 	background-color: $gold;
 	color: $text-w;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 11px;
+	line-height: 15px;
+	box-shadow: 0px 5px 15px 0px #E3B87333;
+	border-radius: 2px;
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0px 5px 15px 0px #E3B8734D;
+	}
 }
 
 
