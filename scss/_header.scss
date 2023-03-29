@@ -1,6 +1,5 @@
 .container {
 	background-color: $background;
-	min-width: 320px;
 	&__toolbar {
 		margin: 0 auto;
 	}
@@ -51,6 +50,7 @@
 		margin-left: 45px;
 		&:hover {
 			cursor: pointer;
+			box-shadow: 0px 5px 15px 0px #E3B8734D;
 		}
 		@media (max-width: $maxw-ipad) {
 			display: none;
@@ -63,82 +63,4 @@
 	color: $text-w;
 }
 
-.main-section {
-	display: flex;
-	height: 707px;
-	background-image: url(../images/main-image-background.png);
-	background-size: cover;
-	background-position: center center;
-	position: relative;
-	z-index: 1;
-	&__blackout {
-		position: absolute;
-		width:100%;
-		height:100%;
-		background: rgba(0, 0, 0, 0.7);
-		z-index: -1;
-	}
-	@media screen and (max-width: $maxw-mobile) {
-		background-image: url(../images/main-image-background-mobile.png);
-		height: 476px;
-	}
-	&__content {
-		display: flex;
-		flex-direction: column;
-		width: 1170px;
-		padding-left: 18px;
-		padding-right: 17px;
-		margin: 200px auto auto;
-		@media screen and (max-width: $maxw-mobile) {
-			margin: 85px 0;
-		}
-	}
-	&__title {
-		max-width: 550px;
-		@include h-text (40px, 53px, $heading-w);
-		&_gold {
-			color: $gold;
-			font-family: inherit;
-		}
-		@media screen and (max-width: $maxw-mobile) {
-			font-size: 23px;
-			line-height: 30px;
-			max-width: 340px;
-		}
-	}
-	&__description {
-		max-width: 505px;
-		@include text (22px, 36px, $text-w);
-		margin: 30px 0;
-		@media screen and (max-width: $maxw-mobile) {
-			font-size: 23px;
-			line-height: 30px;
-			width: 100%;
-			padding-right: 20px;
-		}
-	}
-	&__button-block {
-		display: flex;
-	}
-	&__button {
-		width: 207px;
-		height: 51px;
-		@include h-text (11px, 15px, $text-w);
-		font-style: italic;
-		background-color: rgba(0, 0, 0, 0);
-		border: 1px solid #FFFFFF;
-		border-radius: 2px;
-		margin-right: 20px;
-		&:hover {
-			background-color: #E3B873;
-			box-shadow: 0px 5px 15px 0px #E3B8734D;
-			border-radius: 2px;
-			border: none;
-		}
-		@media screen and (max-width: $maxw-mobile) {
-		&_only-desktop {
-			display: none;
-		}
-		}
-	}
-}
+

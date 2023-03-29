@@ -10,7 +10,10 @@
 
 @import "_general";
 
-
+.wrapper {
+    min-width: 280px;
+}
 //__header________________//
 
 @import "_header";
+@import "_main-section"
