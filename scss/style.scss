@@ -16,5 +16,13 @@
 //__header________________//
 
 @import "_header";
+
+.sections {
+    display: grid;
+    grid-template-rows: 707px 750px 853px 250px;
+    @media screen and (max-width: $maxw-mobile) {
+        grid-template-rows: 476px 750px 853px 250px;
+    }
+}
 @import "_main-section";
 @import "_section_1-3";

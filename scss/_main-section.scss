@@ -1,4 +1,7 @@
 .main-section {
+	&:nth-of-type(1) {
+		grid-area: 1;
+	}
 	display: flex;
 	height: 707px;
 	background-image: url(../images/main-image-background.png);
