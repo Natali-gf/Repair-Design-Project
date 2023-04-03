@@ -230,11 +230,20 @@ a, a:hover, a:active, a:visited {
 }
 .projects__content {
   max-width: 1171px;
-  height: 558px;
+  height: 553px;
   margin: 107px auto 92px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+@media screen and (max-width: 767px) {
+  .projects__content {
+    margin: 36px 0 58px;
+    padding: 0 17px 0 18px;
+    max-width: 100vw;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 .projects__heading {
   max-width: 200px;
@@ -246,15 +255,39 @@ a, a:hover, a:active, a:visited {
   max-width: 445px;
   margin: 34px auto 42px 0;
 }
+@media screen and (max-width: 767px) {
+  .projects__text {
+    margin: 22px auto 36px;
+    font-size: 11px;
+    line-height: 17px;
+    text-align: center;
+  }
+}
 .projects__text_size-less {
   font-size: 13px;
   line-height: 21px;
   color: white;
 }
+@media screen and (max-width: 767px) {
+  .projects__text_size-less {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
 .projects__tabs {
   align-self: flex-end;
   position: absolute;
   height: inherit;
+  background-image: url(../images/image-section_1.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+@media screen and (max-width: 767px) {
+  .projects__tabs {
+    position: relative;
+    align-self: normal;
+    background-image: url(../images/image-section_1-mobile.png);
+  }
 }
 .projects__parameters {
   max-width: 445px;
@@ -271,16 +304,34 @@ a, a:hover, a:active, a:visited {
 .projects__arrows circle:hover {
   fill: white;
 }
+@media screen and (max-width: 767px) {
+  .projects__arrows {
+    display: none;
+  }
+}
 
 .heading_big {
   font-size: 27px;
   line-height: 37px;
   color: #E3B873;
 }
+@media screen and (max-width: 767px) {
+  .heading_big {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
 
 .subtitle {
   font-size: 18px;
   line-height: 25px;
+}
+@media screen and (max-width: 767px) {
+  .subtitle {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 .tabs__name {
@@ -290,7 +341,11 @@ a, a:hover, a:active, a:visited {
   font-size: 14px;
   line-height: 19px;
   margin-right: 60.5px;
-  padding-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .tabs__name {
+    display: none;
+  }
 }
 .tabs__name:hover {
   color: #E3B873;
