@@ -1,78 +1,64 @@
 // todo __First section__ //
 
 .projects {
-	&:nth-of-type(2) {
-		grid-area: 2;
+
+	// height: 751px;
+	&__background {
+		position: absolute;
+		background:$background;
+		height: 1074px;
+		width: 100%;
+		z-index: -1;
 	}
-	background-color: $background;
-	height: 1074px;
 	&__content {
-		max-width: 1171px;
-		height: 553px;
-		margin: 107px auto 92px;
+		margin: 0 auto;
+		padding: 175px 0 0;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		@media screen and (max-width: $maxw-mobile) {
-			margin: 36px 0 58px;
-			padding: 0 17px 0 18px;
-			max-width: 100vw;
+			padding: 36px 17px 0 18px;
 			justify-content: flex-start;
 			align-items: center;
 		}
 	}
-	&__heading {
+	&__title {
 		max-width: 200px;
 	}
 	&__text {
-		font-size: 14px;
-		line-height: 27px;
-		color: $text-w;
+		@include text (14px, 26px, $text-w);
 		max-width: 445px;
 		margin: 34px auto 42px 0;
 		@media screen and (max-width: $maxw-mobile) {
-			margin: 22px auto 36px;
+			margin: 22px 15px 36px;
 			font-size: 11px;
 			line-height: 17px;
 			text-align: center;
 		}
 		&_size-less {
-		font-size: 13px;
-		line-height: 21px;
-		color: $text-w;
-		@media screen and (max-width: $maxw-mobile){
-			font-size: 11px;
-			line-height: 15px;
-		}
+			@include text (13px, 21px, $text-w);
+			@media screen and (max-width: $maxw-mobile){
+				font-size: 11px;
+				line-height: 15px;
+			}
 		}
 	}
 	&__tabs {
 		align-self: flex-end;
 		position: absolute;
-		height: inherit;
-		background-image: url(../images/image-section_1.png);
-		background-repeat: no-repeat;
-		background-position: bottom;
 		@media screen and (max-width: $maxw-mobile) {
 			position: relative;
-			align-self: normal;
-			background-image: url(../images/image-section_1-mobile.png);
+			align-self: center;
 		}
 	}
 	&__parameters {
-		max-width: 445px;
-		display: inline-grid;
-		grid-template: 31px 76px 31px 24px / 45% 55%;
-		grid-auto-flow: column;
-		@media screen and (max-width: $maxw-mobile) {
-			// min-width: 340px;
-		}
+		margin-bottom: 30px;
 	}
 	&__subtitle {
 		color: $gold;
+		margin-bottom: 9px;
 	}
 	&__arrows  {
-		padding-top: 80px;
 		& circle:hover {
 			fill: white;
 		}
@@ -82,14 +68,18 @@
 	}
 }
 
-.heading_big {
-	font-size: 27px;
-	line-height: 37px;
-	color: $gold;
-	@media screen and (max-width: $maxw-mobile) {
-		font-size: 22px;
-		line-height: 30px;
-		text-align: center;
+.parameters {
+	max-width: 445px;
+	display: flex;
+	flex-wrap: wrap;
+	&__box {
+		width: 190px;
+		height: 107px;
+		@media screen and (max-width: $maxw-mobile){
+			width: 50%;
+			height: 93px;
+			margin-top: 36px;
+		}
 	}
 }
 
@@ -103,13 +93,17 @@
 }
 
 .tabs {
+	width: 679px;
+	height: inherit;
+	@media screen and (max-width: $maxw-mobile) {
+		width: 100%;
+	}
 	&__name {
 		display: inline-block;
 		height: 20px;
-		color: #FFFFFF4D;
-		font-size: 14px;
-		line-height: 19px;
+		@include text (14px, 19px, #FFFFFF4D);
 		margin-right: 60.5px;
+		margin-bottom: 50px;
 		@media screen and (max-width: $maxw-mobile) {
 			display: none;
 		}
@@ -120,7 +114,7 @@
 			color: $gold;
 			&::after {
 				content: '';
-				background: #E3B873;
+				background: $gold;
 				height: 1px;
 				display: block;
 				width:initial;
@@ -133,20 +127,56 @@
 	}
 
 	&__image-block {
+		@media screen and (max-width: $maxw-mobile) {
+			&::before {
+				content: url(../images/icons/arrow_left.svg);
+				height: 36px;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 14px;
+				margin: auto;
+			}
+			&::after {
+				content: url(../images/icons/arrow_right.svg);
+				height: 36px;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 14px;
+				margin: auto;
+			}
+			&_image {
+				display: none;
+			}
+		}
+		&_image {
+			@media screen and (max-width: $maxw-mobile) {
+			display: none;
+			}
+		}
+		&_image-mobile {
+			display: none;
+			width: 100%;
+			@media screen and (max-width: $maxw-mobile) {
+				display: block;
+				width: 100%;
+			}
+		}
 	}
 }
+
+
 
 // todo __Second section__ //
 
 .control {
-	&:nth-of-type(3) {
-		grid-area: 3;
-	}
 
 	&__content {
 	}
 
-	&__heading {
+	&__title {
+		color: $text-w;
 	}
 
 	&__movie {
@@ -155,7 +185,8 @@
 	&__text {
 	}
 }
-.heading-section {
+
+.title-section {
 	font-size: 20px;
 	line-height: 28px;
 	text-transform: uppercase;

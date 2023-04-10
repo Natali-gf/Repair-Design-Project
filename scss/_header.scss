@@ -1,19 +1,27 @@
 .container {
-	background-color: $background;
-	&__toolbar {
-		margin: 0 auto;
-	}
-}
-.toolbar {
-	height: 83px;
 	max-width: $maxw-content;
+	min-width: 280px;
+	height: 83px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	&_footer {
+		height: 133px;
+	}
+	&_size-s {
+		max-width: $width-block_1-2;
+		min-width: 280px;
+	}
+}
+.toolbar {
+	background-color: $background;
 	font-size: 11px;
 	line-height: 15px;
 	text-transform: uppercase;
-	padding: 0 17px 0 18px;
+	&__container {
+		margin: 0 auto;
+		padding: 0 17px 0 18px;
+	}
 	&__logo {
 		width: 275px;
 	}
@@ -22,8 +30,8 @@
 	}
 	&__navigation {
 		color: $text-w;
-		display: flex;
 		width: 572px;
+		display: flex;
 		justify-content: space-between;
 		&_link:hover {
 			color: $gold;

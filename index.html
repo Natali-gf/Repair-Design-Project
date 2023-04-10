@@ -3,14 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0">
 	<link href="./css/style.css" rel="stylesheet" type="text/css">
 	<title>Document</title>
 </head>
-<body class="wrapper">
-<!-- todo __Header________________________________ -->
-	<header class="container">
-		<div class="toolbar container__toolbar">
+<body>
+<!-- * __Header________________________________ -->
+	<header class="toolbar">
+		<div class="container toolbar__container">
 			<div class="toolbar__logo">
 				<a class="toolbar__logo_text" href="#" target="_self" tabindex="1">
 					IC "Repair Design Project"
@@ -48,12 +48,11 @@
 	</header>
 <!-- * __Main__ -->
 	<main>
-		<div class="sections">
-<!-- todo __Main section________________________________ -->
+<!-- * __Main section________________________________ -->
 			<section class="main-section">
 				<div class="main-section__blackout"></div>
-				<div class="main-section__content">
-					<h1 class="heading main-section__title">
+				<div class="container_size-s main-section__content">
+					<h1 class="title main-section__title">
 						Turnkey Repair in the city of
 						<span class="main-section__title_gold">
 							Rostov-on-Don
@@ -79,53 +78,63 @@
 			</section>
 <!-- todo __First section________________________________ -->
 			<section class="projects">
-				<div class="projects__content">
-					<h2 class="heading heading_big projects__heading">
+				<div class="projects__background"></div>
+				<div class="container_size-s projects__content">
+					<h2 class="title title_big projects__title">
 						Completed projects
 					</h2>
 					<p class="projects__text">
 						Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families
 					</p>
 					<div class="tabs projects__tabs">
-						<h3 class="heading tabs__name" tabindex="12" active>
+						<h3 class="title tabs__name" tabindex="12" active>
 							Rostov-on-Don, Admiral
 						</h3>
-						<h3 class="heading tabs__name" tabindex="13">
+						<h3 class="title tabs__name" tabindex="13">
 							Sochi Thieves
 						</h3>
-						<h3 class="heading tabs__name" tabindex="14">
+						<h3 class="title tabs__name" tabindex="14">
 							Rostov-on-Don Patriotic
 						</h3>
 						<div class="tabs__image-block">
-							<!-- <img src="./images/image-section_1.png" alt="two armchairs near a large window, a coffee table, curtains"> -->
+							<img class="tabs__image-block_image" src="./images/image-section_1.png" alt="two armchairs near a large window, a coffee table, curtains">
+							<img class="tabs__image-block_image-mobile" src="./images/image-section_1-mobile.png" alt="Division of the room into two zones: a dining room and a recreation area">
 						</div>
 					</div>
-					<div class="projects__parameters">
-						<h3 class="heading subtitle projects__subtitle">
-							City:
-						</h3>
-						<p class="projects__text_size-less">
-							Rostov-on-Don <br>
-							LCD admiral
-						</p>
-						<h3 class="heading subtitle projects__subtitle">
-							Repair time:
-						</h3>
-						<p class="projects__text_size-less">
-							23.5 months
-						</p>
-						<h3 class="heading subtitle projects__subtitle">
-							apartment area:
-						</h3>
-						<p class="projects__text_size-less">
-							81 m2
-						</p>
-						<h3 class="heading subtitle projects__subtitle">
-							Repair Cost:
-						</h3>
-						<p class="projects__text_size-less">
-							Upon request
-						</p>
+					<div class="parameters projects__parameters">
+						<div class="parameters__box">
+							<h3 class="title subtitle projects__subtitle">
+								City:
+							</h3>
+							<p class="projects__text_size-less">
+								Rostov-on-Don <br>
+								LCD admiral
+							</p>
+						</div>
+						<div class="parameters__box">
+							<h3 class="title subtitle projects__subtitle">
+								apartment area:
+							</h3>
+							<p class="projects__text_size-less">
+								81 m2
+							</p>
+						</div>
+						<div class="parameters__box">
+							<h3 class="title subtitle projects__subtitle">
+								Repair time:
+							</h3>
+							<p class="projects__text_size-less">
+								23.5 months
+							</p>
+						</div>
+						<div class="parameters__box">
+							<h3 class="title subtitle projects__subtitle">
+								Repair Cost:
+							</h3>
+							<p class="projects__text_size-less">
+								Upon request
+							</p>
+						</div>
 					</div>
 					<div class="projects__arrows">
 						<svg width="206px" height="14px">
@@ -140,7 +149,7 @@
 <!-- todo __Second section________________________________ -->
 			<section class="control">
 				<div class="control__content">
-					<h2 class="heading-section control__heading">
+					<h2 class="title title-section control__title">
 						online control
 					</h2>
 					<div class="control__movie">
@@ -175,8 +184,43 @@
 			</section>
 		</div>
 	</main>
-	<footer>
-
+<!-- * __Footer______________________________________ -->
+	<footer class="toolbar">
+		<div class="container container_footer toolbar__container">
+			<div class="toolbar__logo">
+				<a class="toolbar__logo_text" href="#" target="_self" tabindex="1">
+					IC "Repair Design Project"
+				</a>
+			</div>
+			<nav>
+				<ul class="toolbar__navigation">
+					<li class="toolbar__navigation_link" tabindex="2">
+						<a>Home</a>
+					</li>
+					<li class="toolbar__navigation_link" tabindex="3">
+						<a>Projects</a>
+					</li>
+					<li class="toolbar__navigation_link" tabindex="4">
+						<a>Measurement</a>
+					</li>
+					<li class="toolbar__navigation_link" tabindex="5">
+						<a>Team</a>
+					</li>
+					<li class="toolbar__navigation_link" tabindex="6">
+						<a>Reviews</a>
+					</li>
+					<li class="toolbar__navigation_link" tabindex="7">
+						<a>Contacts</a>
+					</li>
+				</ul>
+			</nav>
+			<a class="toolbar__phone" href="tel:+7 (928) 768-32-39" tabindex="8">
+				+7 (928) 768-32-39
+			</a>
+			<button class="button toolbar__button" tabindex="9">
+					Request a call
+			</button>
+		</div>
 	</footer>
 </body>
 </html>
