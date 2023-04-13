@@ -8,12 +8,8 @@
     src: url(../fonts/NunitoSans-Regular.ttf);
 }
 
+@import "_variables";
 @import "_general";
-
-// body.wrapper {
-//     min-width: 280px;
-// }
-
 @import "_header";
 @import "_main-section";
 @import "_section_1-3";

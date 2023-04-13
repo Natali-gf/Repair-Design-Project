@@ -1,23 +1,13 @@
 // todo __First section__ //
 
 .projects {
-
-	// height: 751px;
-	&__background {
-		position: absolute;
-		background:$background;
-		height: 1074px;
-		width: 100%;
-		z-index: -1;
-	}
+	background:$background;
 	&__content {
 		margin: 0 auto;
-		padding: 175px 0 0;
-		display: flex;
-		flex-direction: column;
+		padding: 175px 0 92px;
 		justify-content: flex-end;
 		@media screen and (max-width: $maxw-mobile) {
-			padding: 36px 17px 0 18px;
+			padding: 36px 17px 20px 18px;
 			justify-content: flex-start;
 			align-items: center;
 		}
@@ -35,13 +25,6 @@
 			line-height: 17px;
 			text-align: center;
 		}
-		&_size-less {
-			@include text (13px, 21px, $text-w);
-			@media screen and (max-width: $maxw-mobile){
-				font-size: 11px;
-				line-height: 15px;
-			}
-		}
 	}
 	&__tabs {
 		align-self: flex-end;
@@ -52,43 +35,16 @@
 		}
 	}
 	&__parameters {
-		margin-bottom: 30px;
+		margin-top: 36px;
 	}
-	&__subtitle {
-		color: $gold;
-		margin-bottom: 9px;
-	}
-	&__arrows  {
+	&__arrows {
+		margin-top: 30px;
 		& circle:hover {
 			fill: white;
 		}
 		@media screen and (max-width: $maxw-mobile) {
 			display: none;
 		}
-	}
-}
-
-.parameters {
-	max-width: 445px;
-	display: flex;
-	flex-wrap: wrap;
-	&__box {
-		width: 190px;
-		height: 107px;
-		@media screen and (max-width: $maxw-mobile){
-			width: 50%;
-			height: 93px;
-			margin-top: 36px;
-		}
-	}
-}
-
-.subtitle{
-	font-size: 18px;
-	line-height: 25px;
-	@media screen and (max-width: $maxw-mobile) {
-		font-size: 14px;
-		line-height: 19px;
 	}
 }
 
@@ -125,12 +81,15 @@
 			margin-right: 0;
 		}
 	}
-
 	&__image-block {
 		@media screen and (max-width: $maxw-mobile) {
 			&::before {
-				content: url(../images/icons/arrow_left.svg);
+				content: '';
+				background: $gold url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.56569 12.478L1.08689 6.99975L6.56569 1.52147L7.34778 2.30348L2.65107 6.99975L7.34778 11.696L6.56569 12.478Z' fill='white' stroke='white' stroke-width='0.75'/%3E%3C/svg%3E%0A") center no-repeat;
+				border-radius: 50%;
 				height: 36px;
+				width: 36px;
+				display: block;
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -138,8 +97,12 @@
 				margin: auto;
 			}
 			&::after {
-				content: url(../images/icons/arrow_right.svg);
+				content: '';
+				background: $gold url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.43431 1.52197L6.91311 7.00025L1.43431 12.4785L0.652222 11.6965L5.34894 7.00025L0.652222 2.30399L1.43431 1.52197Z' fill='white' stroke='white' stroke-width='0.75'/%3E%3C/svg%3E%0A") center no-repeat;
+				border-radius: 50%;
 				height: 36px;
+				width: 36px;
+				display: block;
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -166,31 +129,219 @@
 	}
 }
 
+.parameters {
+	max-width: 445px;
+	display: flex;
+	flex-wrap: wrap;
+	&__box {
+		width: 190px;
+		height: 107px;
+		@media screen and (max-width: $maxw-mobile){
+			width: 50%;
+			height: 93px;
+		}
+	}
+	&__subtitle {
+		color: $gold;
+		margin-bottom: 9px;
+	}
+	&__text {
+		@include text (13px, 21px, $text-w);
+		@media screen and (max-width: $maxw-mobile){
+			font-size: 11px;
+			line-height: 15px;
+		}
+	}
+}
 
+.subtitle{
+	font-size: 18px;
+	line-height: 25px;
+	@media screen and (max-width: $maxw-mobile) {
+		font-size: 14px;
+		line-height: 19px;
+	}
+}
 
 // todo __Second section__ //
 
 .control {
-
+	background: linear-gradient(to top, transparent 71%, $background 29%, );
+  	@media screen and (max-width: $maxw-mobile) {
+		background: $background;
+  	}
 	&__content {
+		margin: 0 auto;
+		align-items: center;
+		padding: 0 17px 0 18px;
 	}
-
 	&__title {
 		color: $text-w;
+		margin-bottom: 30px;
+		&::after {
+			content: '';
+			background: url(../images/icons/icon_line.svg) 20% / 33px 28px no-repeat, url(../images/icons/icon_camera.svg) 50% / 33px no-repeat, url(../images/icons/icon_line.svg) 80% / 33px 28px no-repeat;
+			display: block;
+			height: 35px;
+			margin-top: 12px;
+		}
 	}
-
-	&__movie {
+	&__player {
+		display: flex;
+		width: 817px;
+		height: 434px;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/background-image-play-video.png);
+		&::after {
+			content: '';
+			background: $gold url("data:image/svg+xml,%3Csvg width='21' height='26' viewBox='0 0 21 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 13L7.65417e-07 25.1244L1.82536e-06 0.875644L21 13Z' fill='white'/%3E%3C/svg%3E%0A") 55% no-repeat;
+			border-radius: 50%;
+			height: 85px;
+			width: 85px;
+			display: block;
+			margin: auto;
+		}
+		@media screen and (max-width: $maxw-mobile) {
+			width: 100%;
+			height: 0px;
+			padding-bottom: 68%;
+			background-size: cover;
+			&::after {
+				height: 37px;
+				width: 37px;
+				background-size: 12px;
+				margin-top: 30%;
+			}
+		}
 	}
-
 	&__text {
+		max-width: 680px;
+		text-align: center;
+		@include text(18px, 37px, $text-dark);
+		margin-top: 62.5px;
+		@media screen and (max-width: $maxw-mobile) {
+			font-size: 11px;
+			line-height: 18px;
+			@include text(11px, 18px, $text-w);
+		}
+		&::before {
+			content: '';
+			height: 1.54px;
+			width: 55px;
+			background: $gold;
+			background-position: 50% 0;
+			display: block;
+			border-radius: 30%;
+			margin: 0 auto 35px;
+		}
 	}
-}
-
-.title-section {
-	font-size: 20px;
-	line-height: 28px;
-	text-transform: uppercase;
+	&__contact-form {
+		margin: 91px 0 148px;
+		@media screen and (max-width: $maxw-mobile) {
+			margin: 0;
+		}
+	}
 }
 
 
 // todo __Third section__ //
+
+.contact-form {
+
+	&__block {
+		display: flex;
+		justify-content: center;
+		height: 103px;
+	}
+	&__input {
+		@include text (13px, 21px, $input-name-d);
+		&:first-child {
+			margin-right: 58px;
+		}
+	}
+	&__text {
+		@include text (14px, 22px, $input-text-d);
+		&::placeholder {
+			color: $input-text-d;
+		}
+	}
+	&__checkbox {
+		align-self: flex-end;
+		align-items: center;
+		position: absolute;
+		@media screen and (max-width: $maxw-mobile) {
+			position: relative;
+		}
+	}
+	&__button {
+		height: 51px;
+		width: 200px;
+		font-size: 13px;
+		line-height: 27px;
+		margin-left: 49px;
+	}
+	@media screen and (max-width: $maxw-mobile){
+		width: 100%;
+		&__block {
+			flex-direction: column;
+			height: auto;
+		}
+		&__input {
+			color: $input-name-w;
+			margin-top: 63px;
+			&:first-child {
+				margin-right: 0;
+			}
+		}
+		&__text {
+			@include text(14px, 19px, $input-text-w);
+			background: $background;
+			&::placeholder {
+				color: $input-text-w;
+			}
+		}
+		&__checkbox {
+			margin: 26px auto 0;
+		}
+		&__button {
+			margin: 62px auto -25px;
+		}
+	}
+}
+
+.input {
+	height: 25px;
+	width: 231px;
+	display: flex;
+	flex-direction: column;
+	outline: none;
+	border-bottom: 1px Solid
+	rgb(117, 117, 117);
+	@media screen and (max-width: $maxw-mobile) {
+		width: 100%;
+	}
+}
+.check {
+	display: flex;
+	&__box {
+		display: none;
+	}
+
+	&__mark {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 18px;
+		width: 18px;
+		background: $gold;
+		color: $input-text-w;
+		margin-right: 8px;
+		&::before {
+			content:"\2714";
+			opacity: 0;
+			transition: .2s;
+		}
+	}
+}
+.check__box:checked + .check__mark::before{
+	opacity: 1;
+}

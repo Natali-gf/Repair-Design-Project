@@ -1,26 +1,15 @@
 .main-section {
 	display: flex;
 	height: 707px;
-	background-image: url(../images/main-image-background.png);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/main-image-background.png);
 	background-size: cover;
 	background-position: center center;
-	position: relative;
-	z-index: 1;
-	&__blackout {
-		position: absolute;
-		width:100%;
-		height:100%;
-		background: rgba(0, 0, 0, 0.7);
-		z-index: -1;
-	}
 	@media screen and (max-width: $maxw-mobile) {
-		background-image: url(../images/main-image-background-mobile.png);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/main-image-background-mobile.png);
 		height: 476px;
 	}
 	&__content {
 		width: 100%;
-		// display: flex;
-		// flex-direction: column;
 		padding-left: 18px;
 		padding-right: 17px;
 		margin: 200px auto auto;
@@ -83,31 +72,3 @@
 	}
 }
 
-.title {
-	font-family: "YesevaOne", Georgia, 'Times New Roman', Times, serif;
-	text-transform: uppercase;
-	&_section {
-		font-size: 20px;
-		line-height: 28px;
-	}
-	&_big {
-		font-size: 27px;
-		line-height: 37px;
-		color: $gold;
-		@media screen and (max-width: $maxw-mobile) {
-			font-size: 22px;
-			line-height: 30px;
-			text-align: center;
-		}
-	}
-	&_block {
-		font-size: 18px;
-		line-height: 25px;
-		color: #363636;
-	}
-	&_block_clients {
-		// font-size: 18px;
-		line-height: 23px;
-		color: #181818;
-	}
-}
