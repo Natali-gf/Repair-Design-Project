@@ -12,12 +12,14 @@
 	&__title {
 		align-self: flex-start;
 		position: absolute;
+		text-align: center;
 		margin-top: -106px;
 		&::after {
 			content: '';
 			background: url(../images/icons/icon_line.svg) 20% / 33px 28px no-repeat, url(../images/icons/icon_tools.svg) 50% / 33px no-repeat, url(../images/icons/icon_line.svg) 80% / 33px 28px no-repeat;
 			display: block;
 			height: 35px;
+			width: 213px;
 			margin-top: 12px;
 		}
 	}
@@ -91,7 +93,7 @@
 	}
 	&__content {
 		height: 725px;
-		margin: auto;
+		margin: 0 auto 242px;
 		align-items: center;
 		justify-content: flex-end;
 		padding: 0 17px;

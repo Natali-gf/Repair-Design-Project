@@ -119,14 +119,8 @@
 				display: none;
 			}
 		}
-		&_image {
-			@media screen and (max-width: $maxw-mobile) {
-			display: none;
-			}
-		}
 		&_image-mobile {
 			display: none;
-			width: 100%;
 			@media screen and (max-width: $maxw-mobile) {
 				display: block;
 				width: 100%;
