@@ -33,6 +33,11 @@ a, a:hover, a:active, a:visited {
 		display: flex;
 		flex-direction: column;
 	}
+	&_size-m {
+		max-width: $width-block_4-5-6-7;
+		min-width: 280px;
+		display: flex;
+	}
 }
 
 .title {
@@ -66,6 +71,9 @@ a, a:hover, a:active, a:visited {
 	}
 }
 
+.text-box {
+	@include text (13px, 27px, $text-block-grey);
+}
 
 
 

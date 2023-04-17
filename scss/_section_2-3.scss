@@ -1,4 +1,4 @@
-// todo __First section__ //
+// todo __Second section__ //
 
 .projects {
 	background:$background;
@@ -6,10 +6,13 @@
 		margin: 0 auto;
 		padding: 175px 0 92px;
 		justify-content: flex-end;
-		@media screen and (max-width: $maxw-mobile) {
-			padding: 36px 17px 20px 18px;
+		@media screen and (max-width: $maxw-ipad) {
 			justify-content: flex-start;
 			align-items: center;
+			text-align: center;
+		}
+		@media screen and (max-width: $maxw-mobile) {
+			padding: 36px 17px 20px 18px;
 		}
 	}
 	&__title {
@@ -19,17 +22,20 @@
 		@include text (14px, 26px, $text-w);
 		max-width: 445px;
 		margin: 34px auto 42px 0;
+		@media screen and (max-width: $maxw-ipad) {
+			margin-left: auto;
+		}
 		@media screen and (max-width: $maxw-mobile) {
 			margin: 22px 15px 36px;
 			font-size: 11px;
 			line-height: 17px;
-			text-align: center;
+
 		}
 	}
 	&__tabs {
 		align-self: flex-end;
 		position: absolute;
-		@media screen and (max-width: $maxw-mobile) {
+		@media screen and (max-width: $maxw-ipad) {
 			position: relative;
 			align-self: center;
 		}
@@ -163,13 +169,13 @@
 	}
 }
 
-// todo __Second section__ //
+// todo __Third section__ //
 
 .control {
 	background: linear-gradient(to top, transparent 71%, $background 29%, );
-  	@media screen and (max-width: $maxw-mobile) {
+	@media screen and (max-width: $maxw-mobile) {
 		background: $background;
-  	}
+	}
 	&__content {
 		margin: 0 auto;
 		align-items: center;
@@ -243,10 +249,9 @@
 }
 
 
-// todo __Third section__ //
+// todo __Contact form__ //
 
 .contact-form {
-
 	&__block {
 		display: flex;
 		justify-content: center;
@@ -254,7 +259,7 @@
 	}
 	&__input {
 		@include text (13px, 21px, $input-name-d);
-		&:first-child {
+		&:nth-child(1) {
 			margin-right: 58px;
 		}
 	}
@@ -278,6 +283,7 @@
 		font-size: 13px;
 		line-height: 27px;
 		margin-left: 49px;
+		font-style: normal;
 	}
 	@media screen and (max-width: $maxw-mobile){
 		width: 100%;

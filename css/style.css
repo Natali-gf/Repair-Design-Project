@@ -43,6 +43,11 @@ a, a:hover, a:active, a:visited {
   display: flex;
   flex-direction: column;
 }
+.container_size-m {
+  max-width: 1236px;
+  min-width: 280px;
+  display: flex;
+}
 
 .title {
   font-family: "YesevaOne", Georgia, "Times New Roman", Times, serif;
@@ -80,6 +85,12 @@ a, a:hover, a:active, a:visited {
   font-size: 18px;
   line-height: 23px;
   color: #181818;
+}
+
+.text-box {
+  font-size: 13px;
+  line-height: 27px;
+  color: #959595;
 }
 
 .toolbar {
@@ -244,11 +255,16 @@ a, a:hover, a:active, a:visited {
   padding: 175px 0 92px;
   justify-content: flex-end;
 }
+@media screen and (max-width: 1299px) {
+  .projects__content {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 767px) {
   .projects__content {
     padding: 36px 17px 20px 18px;
-    justify-content: flex-start;
-    align-items: center;
   }
 }
 .projects__title {
@@ -261,19 +277,23 @@ a, a:hover, a:active, a:visited {
   max-width: 445px;
   margin: 34px auto 42px 0;
 }
+@media screen and (max-width: 1299px) {
+  .projects__text {
+    margin-left: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .projects__text {
     margin: 22px 15px 36px;
     font-size: 11px;
     line-height: 17px;
-    text-align: center;
   }
 }
 .projects__tabs {
   align-self: flex-end;
   position: absolute;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1299px) {
   .projects__tabs {
     position: relative;
     align-self: center;
@@ -522,7 +542,7 @@ a, a:hover, a:active, a:visited {
   line-height: 21px;
   color: rgba(54, 54, 54, 0.5019607843);
 }
-.contact-form__input:first-child {
+.contact-form__input:nth-child(1) {
   margin-right: 58px;
 }
 .contact-form__text {
@@ -552,6 +572,7 @@ a, a:hover, a:active, a:visited {
   font-size: 13px;
   line-height: 27px;
   margin-left: 49px;
+  font-style: normal;
 }
 @media screen and (max-width: 767px) {
   .contact-form {
@@ -626,4 +647,222 @@ a, a:hover, a:active, a:visited {
 
 .check__box:checked + .check__mark::before {
   opacity: 1;
+}
+
+.repairs__container {
+  margin: 254px auto 0;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 17px 0 18px;
+}
+.repairs__title {
+  align-self: flex-start;
+  position: absolute;
+  margin-top: -106px;
+}
+.repairs__title::after {
+  content: "";
+  background: url(../images/icons/icon_line.svg) 20%/33px 28px no-repeat, url(../images/icons/icon_tools.svg) 50%/33px no-repeat, url(../images/icons/icon_line.svg) 80%/33px 28px no-repeat;
+  display: block;
+  height: 35px;
+  margin-top: 12px;
+}
+.repairs__case {
+  width: 392px;
+  margin-bottom: 27px;
+}
+@media screen and (max-width: 767px) {
+  .repairs__case {
+    width: 100%;
+  }
+}
+
+.case {
+  gap: 30px;
+}
+.case__detail {
+  width: 84.2%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  background: white;
+  position: relative;
+  z-index: 1;
+  margin: -140px auto 0;
+}
+@media screen and (max-width: 767px) {
+  .case__detail {
+    margin: -180px auto 0 0;
+  }
+}
+.case__image {
+  width: 100%;
+}
+.case__title {
+  text-transform: capitalize;
+  padding: 25px 0 10px 31px;
+}
+.case__list {
+  padding: 0 31px 47px;
+}
+.case__list li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.case__list li::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #959595;
+}
+.case__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 228px;
+  height: 54px;
+  background-color: #E3B873;
+  color: white;
+  font-style: normal;
+  position: absolute;
+  margin-top: -27px;
+}
+
+.feedback-detail {
+  background-image: url(../images/background-image_2.png);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 767px) {
+  .feedback-detail {
+    display: none;
+  }
+}
+.feedback-detail__content {
+  height: 725px;
+  margin: auto;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 17px;
+}
+.feedback-detail__list {
+  height: 506px;
+  max-width: 330px;
+  padding-left: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  counter-reset: li;
+}
+.feedback-detail__list li::before {
+  content: "0" counter(li);
+  counter-increment: li;
+  font-family: "YesevaOne";
+  font-size: 18px;
+  line-height: 25px;
+  color: white;
+  background: #E3B873;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 42px;
+  border: 8px solid #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  position: absolute;
+  margin-left: -65px;
+}
+.feedback-detail__item {
+  font-size: 14px;
+  line-height: 19px;
+  color: #363636;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.feedback-detail__contact-form {
+  background-color: #131313;
+  height: 506px;
+  max-width: 509px;
+  display: block;
+  margin-left: 16.2%;
+}
+@media screen and (max-width: 1299px) {
+  .feedback-detail__contact-form {
+    margin-left: 10px;
+  }
+}
+.feedback-detail__saving {
+  align-self: flex-end;
+  font-size: 18px;
+  line-height: 26px;
+  color: #E3B873;
+  position: absolute;
+  height: 72px;
+  width: 220px;
+  margin-right: 180px;
+  display: flex;
+  align-items: center;
+}
+.feedback-detail__saving::before {
+  content: url(../images/icons/icon_pig-bank.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  width: 72px;
+  background-color: #E3B873;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: -80px;
+}
+
+.contact-form__title {
+  font-size: 18px;
+  line-height: 26px;
+  color: white;
+  text-align: center;
+  width: 250px;
+  margin: 28px auto 12px;
+}
+.contact-form__block_column {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 27px 49px;
+}
+.contact-form__input_color {
+  color: rgba(255, 255, 255, 0.3019607843);
+}
+.contact-form__input_color:nth-child(-n+2) {
+  margin: 0 0 49px;
+}
+.contact-form__text_color {
+  background-color: #131313;
+  color: white;
+}
+.contact-form__text_color::-moz-placeholder {
+  color: white;
+}
+.contact-form__text_color::placeholder {
+  color: white;
+}
+.contact-form__checkbox_place {
+  align-self: normal;
+  position: relative;
+  margin: 16px 0 39px;
+}
+.contact-form__button_size {
+  width: 213px;
+  padding: 19px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 200px;
+}
+
+.input_size {
+  width: 100%;
 }

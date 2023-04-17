@@ -150,10 +150,7 @@
 				<h2 class="title title-section control__title">
 					online control
 				</h2>
-				<div class="control__player">
-					<!-- <div class="control__movie">
-					<img src="./images/background-image-play-video.png" alt="The worker makes apartment repairs"> -->
-				</div>
+				<div class="control__player"></div>
 				<p class="control__text">
 					At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities! Leave a request below and you will receive a link to the broadcast.
 				</p>
@@ -183,73 +180,158 @@
 <!-- todo __Fourth section________________________________ -->
 
 		<section class="repairs">
-			<div class="repairs__container">
+			<div class="container_size-m repairs__container">
 				<h2 class="title title_section repairs__title">
 					Types of repair
 				</h2>
 				<div class="case repairs__case">
-					<img src="" alt="">
+					<img class="case__image" src="./images/block-image_1.png" alt="">
 					<div class="case__detail">
-						<h3 class="case__title">
+						<h3 class="title case__title">
 							Redecorating
 						</h3>
-						<ul class="case__list">
-							<li class="case__item">Dismantling of old coatings</li>
-							<li class="case__item">Wallpapering</li>
-							<li class="case__item">Painting walls and ceilings</li>
-							<li class="case__item">Laying flooring</li>
-							<li class="case__item">Replacing plumbing</li>
-							<li class="case__item">Replacing sockets and switches</li>
-							<li class="case__item">Replacing doors</li>
+						<ul class="text-box case__list">
+							<li>Dismantling of old coatings</li>
+							<li>Wallpapering</li>
+							<li>Painting walls and ceilings</li>
+							<li>Laying flooring</li>
+							<li>Replacing plumbing</li>
+							<li>Replacing sockets and switches</li>
+							<li>Replacing doors</li>
 						</ul>
-						<button class="case__button">
+						<div class="title subtitle case__price">
 							from 900 rub / m2
-						</button>
+						</div>
 					</div>
 				</div>
 				<div class="case repairs__case">
-					<img src="" alt="">
+					<img class="case__image" src="./images/block-image_2.png" alt="">
 					<div class="case__detail">
-						<h3 class="case__title">
+						<h3 class="title case__title">
 							Overhaul
 						</h3>
-						<ul class="case__list">
-							<li class="case__item">Dismantling of old coatings</li>
-							<li class="case__item">Wallpapering</li>
-							<li class="case__item">Painting walls and ceilings</li>
-							<li class="case__item">Laying flooring</li>
-							<li class="case__item">Replacing plumbing</li>
-							<li class="case__item">Replacing sockets and switches</li>
-							<li class="case__item">Replacing doors</li>
+						<ul class="text-box case__list">
+							<li>Dismantling of old coatings</li>
+							<li>Wallpapering</li>
+							<li>Painting walls and ceilings</li>
+							<li>Laying flooring</li>
+							<li>Replacing plumbing</li>
+							<li>Replacing sockets and switches</li>
+							<li>Replacing doors</li>
 						</ul>
-						<button class="case__button">
+						<div class="title subtitle case__price">
 							from 1800 rub / m2
-						</button>
+						</div>
 					</div>
 				</div>
 				<div class="case repairs__case">
-					<img src="" alt="">
+					<img class="case__image" src="./images/block-image_3.png" alt="">
 					<div class="case__detail">
-						<h3 class="case__title">
+						<h3 class="title case__title">
 							Designer Repair
 						</h3>
-						<ul class="case__list">
-							<li class="case__item">Dismantling of old coatings</li>
-							<li class="case__item">Wallpapering</li>
-							<li class="case__item">Painting walls and ceilings</li>
-							<li class="case__item">Laying flooring</li>
-							<li class="case__item">Replacing plumbing</li>
-							<li class="case__item">Replacing sockets and switches</li>
-							<li class="case__item">Replacing doors</li>
+						<ul class="text-box case__list">
+							<li>Dismantling of old coatings</li>
+							<li>Wallpapering</li>
+							<li>Painting walls and ceilings</li>
+							<li>Laying flooring</li>
+							<li>Replacing plumbing</li>
+							<li>Replacing sockets and switches</li>
+							<li>Replacing doors</li>
 						</ul>
-						<button class="case__button">
+						<div class="title subtitle case__price">
 							from 4000 rub / m2
-						</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
+<!-- todo __Fifth section________________________________ -->
+
+		<section class="feedback-detail">
+			<div class="container_size-m feedback-detail__content">
+				<ul class="feedback-detail__list">
+					<li class="feedback-detail__item"><span>
+						Our specialist will arrive for measurements per day contact, or appoint a date convenient for you</span>
+					</li>
+					<li class="feedback-detail__item">
+						<span>Free metering</span>
+					</li>
+					<li class="feedback-detail__item">
+						<span>Free consultation</span>
+					</li>
+					<li class="feedback-detail__item">
+						<span>Get a cost estimate and<br>the timing of your future repairs</span>
+					</li>
+				</ul>
+				<div class="contact-form feedback-detail__contact-form">
+					<h3 class="contact-form__title">
+						Leave a request for free departure of the measurer
+					</h3>
+					<form class="contact-form__block contact-form__block_column">
+						<div class="contact-form__input contact-form__input_color">
+							<label class="contact-form__label" for="name">
+								Name
+							</label>
+							<input class="input input_size contact-form__text contact-form__text_color" id="name" placeholder="What is your name:">
+						</div>
+						<div class="contact-form__input contact-form__input_color">
+							<label class="contact-form__label" for="phone">
+								Phone
+							</label>
+							<input class="input input_size contact-form__text contact-form__text_color" id="phone" placeholder="Your phone number:">
+						</div>
+						<div class="contact-form__input contact-form__input_color">
+							<label class="contact-form__label" for="phone">
+								Email
+							</label>
+							<input class="input input_size contact-form__text contact-form__text_color" id="phone" placeholder="Your mail:">
+						</div>
+						<label class="check contact-form__checkbox contact-form__checkbox_place">
+							<input type="checkbox" class="check__box" >
+							<span class="check__mark"></span>
+							<span class="contact-form__text
+							contact-form__text_color">I agree to the processing of personal data.</span>
+						</label>
+						<button class="button contact-form__button contact-form__button_size">
+							Call the measurer
+						</button>
+					</form>
+				</div>
+				<div class="feedback-detail__saving">
+					Help save 10 - 20% of the cost of materials
+				</div>
+			</div>
+		</section>
 	</main>
+
+<!-- todo __Sixth section________________________________ -->
+
+	<section class="realization">
+		<div class="realization__content">
+			<div class="styles realization__styles">
+				<h2 class="title title_big realization__title">
+					We realize your wildest fantasies
+				</h2>
+				<ul class="styles__list">
+					<li class="styles__item">American classic</li>
+					<li class="styles__item">Empire</li>
+					<li class="styles__item">Classical</li>
+					<li class="styles__item">Loft</li>
+					<li class="styles__item">Minimalism</li>
+					<li class="styles__item">Provence</li>
+					<li class="styles__item">Romanticism</li>
+					<li class="styles__item">Scandinavian style</li>
+					<li class="styles__item">Mediterranean style</li>
+					<li class="styles__item">High tech</li>
+					<li class="styles__item">Eclecticism</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+
 <!-- * __Footer______________________________________ -->
 	<footer class="toolbar">
 		<div class="container container_footer toolbar__container">

@@ -1,0 +1,211 @@
+// todo __Fourth section__
+
+.repairs {
+	&__container {
+		margin: 254px auto 0;
+		align-items: flex-end;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 30px;
+		padding: 0 17px 0 18px;
+	}
+	&__title {
+		align-self: flex-start;
+		position: absolute;
+		margin-top: -106px;
+		&::after {
+			content: '';
+			background: url(../images/icons/icon_line.svg) 20% / 33px 28px no-repeat, url(../images/icons/icon_tools.svg) 50% / 33px no-repeat, url(../images/icons/icon_line.svg) 80% / 33px 28px no-repeat;
+			display: block;
+			height: 35px;
+			margin-top: 12px;
+		}
+	}
+
+	&__case {
+		width: 392px;
+		margin-bottom: 27px;
+		@media screen and (max-width: $maxw-mobile) {
+			width: 100%;
+		}
+	}
+}
+
+.case {
+	gap: 30px;
+	&__detail {
+		width: 84.2%;
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+		background: white;
+		position: relative;
+		z-index: 1;
+		margin: -140px auto 0;
+		@media screen and (max-width: $maxw-mobile) {
+			margin: -180px auto 0 0;
+		}
+	}
+	&__image{
+		width: 100%;
+	}
+	&__title {
+		text-transform: capitalize;
+		padding: 25px 0 10px 31px;
+	}
+	&__list {
+		padding: 0 31px 47px;
+		& li {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			&::before {
+				content: '';
+				display: block;
+				height: 5px;
+				width: 5px;
+				border-radius: 50%;
+				background-color: $text-block-grey;
+			}
+		}
+	}
+	&__price {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 228px;
+		height: 54px;
+		background-color: $gold;
+		color: $text-w;
+		font-style: normal;
+		position: absolute;
+		margin-top: -27px;
+	}
+}
+
+//todo __Fifth section__
+
+.feedback-detail {
+	background-image: url(../images/background-image_2.png);
+	background-repeat: no-repeat;
+	@media screen and (max-width: $maxw-mobile) {
+		display: none;
+	}
+	&__content {
+		height: 725px;
+		margin: auto;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 0 17px;
+	}
+	&__list {
+		height: 506px;
+		max-width: 330px;
+		padding-left: 65px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		counter-reset: li;
+		& li::before {
+			content: '0' counter(li);
+			counter-increment: li;
+			font-family: 'YesevaOne';
+			font-size: 18px;
+			line-height: 25px;
+			color: white;
+			background: $gold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 42px;
+			width: 42px;
+			border: 8px solid #fff;
+			box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+			border-radius: 50%;
+			position: absolute;
+			margin-left: -65px;
+		}
+	}
+	&__item {
+		@include text (14px, 19px, $text-dark);
+		height: 60px;
+		display: flex;
+		align-items: center;
+	}
+	&__contact-form {
+		background-color: $background;
+		height: 506px;
+		max-width: 509px;
+		display: block;
+		margin-left: 16.2%;
+		@media screen and (max-width: $maxw-ipad) {
+			margin-left: 10px;
+		}
+	}
+	&__saving {
+		align-self: flex-end;
+		@include text (18px, 26px, $gold);
+		position: absolute;
+		height: 72px;
+		width: 220px;
+		margin-right: 180px;
+		display: flex;
+		align-items: center;
+		&::before {
+			content: url(../images/icons/icon_pig-bank.svg);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 72px;
+			width: 72px;
+			background-color: $gold;
+			border-radius: 50%;
+			position: absolute;
+			margin-left: -80px;
+		}
+	}
+}
+
+.contact-form {
+	&__title {
+		@include text(18px, 26px, $input-text-w);
+		text-align: center;
+		width: 250px;
+		margin: 28px auto 12px;
+	}
+	&__block_column {
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: 27px 49px;
+	}
+	&__input_color {
+		color: $input-name-w;
+		&:nth-child(-n+2) {
+			margin: 0 0 49px;
+		}
+	}
+	&__text_color {
+		background-color: $background;
+		color: $input-text-w;
+		&::placeholder {
+			color: $input-text-w;
+		}
+	}
+	&__checkbox_place {
+		align-self: normal;
+		position: relative;
+		margin: 16px 0 39px;
+	}
+	&__button_size {
+		width: 213px;
+		padding: 19px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 200px;
+	}
+}
+
+.input_size {
+	width: 100%;
+}
+
+
