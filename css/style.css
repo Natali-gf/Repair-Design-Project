@@ -722,6 +722,7 @@ a, a:hover, a:active, a:visited {
   height: 54px;
   background-color: #E3B873;
   color: white;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
   font-style: normal;
   position: absolute;
   margin-top: -27px;
@@ -988,6 +989,16 @@ a, a:hover, a:active, a:visited {
   width: 100%;
 }
 
+.clients {
+  background-image: url(../images/background-image_5.svg);
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+@media screen and (max-width: 767px) {
+  .clients {
+    display: none;
+  }
+}
 .clients__content {
   flex-direction: column;
   align-items: center;
@@ -1014,16 +1025,76 @@ a, a:hover, a:active, a:visited {
   color: #363636;
   margin: 25px 0 39px;
 }
+.clients__comments {
+  gap: 54px;
+  margin-bottom: 354px;
+}
+
 .comment {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .comment__block {
-  max-width: 376px;
+  background-color: white;
+  max-width: 325px;
   height: 428px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.03);
   padding: 0 31px 0 20px;
+  position: relative;
 }
+.comment__client {
+  margin: 24px 0;
+}
+.comment__text {
+  line-height: 23px;
+}
+.comment__data {
+  width: 293px;
+  height: 54px;
+  background-color: #E3B873;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -27px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+  font-size: 17px;
+  line-height: 24px;
+}
+.comment__data::before {
+  content: "";
+  display: block;
+  height: inherit;
+  width: 1px;
+  background-color: white;
+  position: absolute;
+  left: 135px;
+}
+.comment__square {
+  width: 135px;
+  padding-left: 55px;
+  position: relative;
+}
+.comment__square::before {
+  content: url(../images/icons/icon_square.svg);
+  position: absolute;
+  margin: -3px -45px;
+}
+.comment__time {
+  width: 158px;
+  padding-left: 55px;
+  position: relative;
+}
+.comment__time::before {
+  content: url(../images/icons/icon_note.svg);
+  position: absolute;
+  margin: -3px -45px;
+}
+
 .client {
   display: flex;
   align-items: center;
