@@ -180,15 +180,16 @@
 		justify-content: flex-start;
 		padding: 27px 49px;
 	}
-	&__input_color {
-		color: $input-name-w;
+	&__input_dark {
+		@include text (13px, 21px, $input-name-w);
 		&:nth-child(-n+2) {
 			margin: 0 0 49px;
 		}
 	}
-	&__text_color {
+	&__text_white {
 		background-color: $background;
-		color: $input-text-w;
+		@include text (14px, 22px, $input-text-w);
+		width: 100%;
 		&::placeholder {
 			color: $input-text-w;
 		}
@@ -207,9 +208,4 @@
 		margin-left: 200px;
 	}
 }
-
-.input_size {
-	width: 100%;
-}
-
 

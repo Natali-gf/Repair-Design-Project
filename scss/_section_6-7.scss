@@ -43,6 +43,7 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			gap: 0;
+
 		}
 		&__styles {
 			margin-top: 55px;
@@ -56,6 +57,7 @@
 			display: none;
 		}
 		&__image_mobile {
+			margin-bottom: -35.5%;
 			display: flex;
 			align-items: flex-end;
 			width: 100%;
