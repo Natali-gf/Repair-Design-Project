@@ -166,7 +166,7 @@
 // todo __Third section__ //
 
 .control {
-	background: linear-gradient(to top, transparent 71%, $background 29%, );
+	background: linear-gradient(to top, transparent 67.5%, $background 33.5%);
 	@media screen and (max-width: $maxw-mobile) {
 		background: $background;
 	}

@@ -40,6 +40,21 @@ a, a:hover, a:active, a:visited {
 	}
 }
 
+.button {
+	background-color: $gold;
+	color: $text-w;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 11px;
+	line-height: 15px;
+	box-shadow: 0px 5px 15px 0px #E3B87333;
+	border-radius: 2px;
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0px 5px 15px 0px #E3B8734D;
+	}
+}
+
 .title {
 	font-family: "YesevaOne", Georgia, 'Times New Roman', Times, serif;
 	text-transform: uppercase;
@@ -74,6 +89,7 @@ a, a:hover, a:active, a:visited {
 .text-box {
 	@include text (13px, 27px, $text-block-grey);
 }
+
 
 
 
