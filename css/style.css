@@ -24,6 +24,7 @@ ol, ul {
 a, a:hover, a:active, a:visited {
   text-decoration: none;
   outline: none;
+  color: inherit;
 }
 
 .container {
@@ -117,15 +118,13 @@ a, a:hover, a:active, a:visited {
 .toolbar__container {
   margin: 0 auto;
   padding: 0 17px 0 18px;
+  color: white;
 }
 .toolbar__logo {
   width: 275px;
-}
-.toolbar__logo_text {
   color: #E3B873;
 }
 .toolbar__navigation {
-  color: white;
   width: 572px;
   display: flex;
   justify-content: space-between;

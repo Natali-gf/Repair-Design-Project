@@ -6,15 +6,13 @@
 	&__container {
 		margin: 0 auto;
 		padding: 0 17px 0 18px;
+		color: $text-w;
 	}
 	&__logo {
 		width: 275px;
-	}
-	&__logo_text {
 		color: $gold;
 	}
 	&__navigation {
-		color: $text-w;
 		width: 572px;
 		display: flex;
 		justify-content: space-between;
