@@ -1168,6 +1168,11 @@ a, a:hover, a:active, a:visited {
   width: 883px;
   height: 445px;
 }
+@media screen and (max-width: 1299px) {
+  .contacts__contact-form {
+    width: 710px;
+  }
+}
 .contacts__adress {
   color: #E3B873;
   max-width: 600px;
@@ -1205,6 +1210,11 @@ a, a:hover, a:active, a:visited {
 .contacts__map {
   margin-bottom: 66px;
 }
+@media screen and (max-width: 1299px) {
+  .contacts__map {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 767px) {
   .contacts {
     background: #131313;
@@ -1216,12 +1226,11 @@ a, a:hover, a:active, a:visited {
   }
   .contacts__adress {
     order: 2;
+    font-size: 18px;
+    line-height: 24px;
   }
   .contacts__links {
     order: 2;
-  }
-  .contacts .contacts__map {
-    order: 1;
   }
 }
 
@@ -1245,6 +1254,11 @@ a, a:hover, a:active, a:visited {
   width: 231px;
   margin-bottom: 48px;
 }
+@media screen and (max-width: 1299px) {
+  .contact-form__label_size:nth-child(-n+2) {
+    width: 160px;
+  }
+}
 .contact-form__label_size:nth-child(2) {
   position: absolute;
   top: 45px;
@@ -1254,8 +1268,18 @@ a, a:hover, a:active, a:visited {
 .contact-form__checkbox_indent {
   margin: 46px auto 50px 25%;
 }
+@media screen and (max-width: 1299px) {
+  .contact-form__checkbox_indent {
+    margin: 46px auto 50px 9%;
+  }
+}
 .contact-form__button_center {
-  margin: 0 33%;
+  margin: 0 31%;
+}
+@media screen and (max-width: 1299px) {
+  .contact-form__button_center {
+    margin: 0 22%;
+  }
 }
 @media screen and (max-width: 767px) {
   .contact-form__block_size {
