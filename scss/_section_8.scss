@@ -1,7 +1,6 @@
 // todo __Eighth section__
 
 .contacts {
-	// height: 953px;
 	background: linear-gradient(rgba(10, 10, 10, 0.904) 3.47%, rgba(16, 16, 16, 0.856)), url(../images/background-image_6.png);
 	background-size: cover;
 	background-position: center center;
@@ -95,6 +94,7 @@
 		display: block;
 		&:nth-child(-n+2) {
 			width: 231px;
+			margin-bottom: 48px;
 		};
 		&:nth-child(2) {
 			position: absolute;
@@ -102,9 +102,9 @@
 			right: 182px;
 			align-self: flex-start;
 		};
-		&:nth-child(4) {
-			text-align: center;
-		}
+	}
+	&__checkbox_indent {
+		margin: 46px auto 50px 25%;
 	}
 	&__button_center {
 		margin: 0 33%;
@@ -119,11 +119,22 @@
 				top: 0;
 				right: 0;
 				width: 100%;
+				margin-bottom: 63px;
 			}
+		}
+		&__checkbox_indent {
+			margin: 21px 0 67px;
+		}
+		&__button_center {
+			width: 100%;
+			margin: 0;
 		}
 	}
 }
 
-.input_size {
-	margin-bottom: 48px;
-}
+// .input_size {
+// 	margin-bottom: 48px;
+// 	&:nth-of-type(3) {
+// 		margin: 0;
+// 	}
+// }

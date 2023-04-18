@@ -1205,6 +1205,7 @@ a, a:hover, a:active, a:visited {
 }
 .contact-form__label_size:nth-child(-n+2) {
   width: 231px;
+  margin-bottom: 48px;
 }
 .contact-form__label_size:nth-child(2) {
   position: absolute;
@@ -1212,8 +1213,8 @@ a, a:hover, a:active, a:visited {
   right: 182px;
   align-self: flex-start;
 }
-.contact-form__label_size:nth-child(4) {
-  text-align: center;
+.contact-form__checkbox_indent {
+  margin: 46px auto 50px 25%;
 }
 .contact-form__button_center {
   margin: 0 33%;
@@ -1227,9 +1228,13 @@ a, a:hover, a:active, a:visited {
     top: 0;
     right: 0;
     width: 100%;
+    margin-bottom: 63px;
   }
-}
-
-.input_size {
-  margin-bottom: 48px;
+  .contact-form__checkbox_indent {
+    margin: 21px 0 67px;
+  }
+  .contact-form__button_center {
+    width: 100%;
+    margin: 0;
+  }
 }
