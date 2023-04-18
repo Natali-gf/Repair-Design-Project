@@ -22,8 +22,14 @@ a, a:hover, a:active, a:visited {
 	max-width: $maxw-content;
 	min-width: 280px;
 	height: 83px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	&_footer {
 		height: 133px;
@@ -31,12 +37,19 @@ a, a:hover, a:active, a:visited {
 	&_size-s {
 		max-width: $width-block_1-2;
 		min-width: 280px;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 	}
 	&_size-m {
 		max-width: $width-block_4-5-6-7;
 		min-width: 280px;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 }
@@ -48,10 +61,12 @@ a, a:hover, a:active, a:visited {
 	font-style: italic;
 	font-size: 11px;
 	line-height: 15px;
-	box-shadow: 0px 5px 15px 0px #E3B87333;
+	-webkit-box-shadow: rgba(227, 184, 115, 0.2);
+	box-shadow: 0px 5px 15px 0px rgba(227, 184, 115, 0.2);
 	border-radius: 2px;
 	&:hover {
 		cursor: pointer;
+		-webkit-box-shadow: 0px 5px 15px 0px rgba(227, 184, 115, 0.302);
 		box-shadow: 0px 5px 15px 0px #E3B8734D;
 	}
 }
