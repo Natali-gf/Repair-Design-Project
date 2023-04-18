@@ -42,6 +42,9 @@
 			display: none;
 		}
 	}
+}
+
+.mobile-menu {
 	@media (max-width: $maxw-ipad) {
 		&>div:hover {
 			margin-bottom: 130px;
@@ -54,7 +57,7 @@
 				position: absolute;
 				left: 0;
 				top: 83px;
-				padding: 20px;
+				padding: 10px 25px 30px;
 				gap: 40px;
 				width: 100%;
 				background: linear-gradient(to bottom, $background 64%, rgba(0, 0, 0, 0.1) 100%);
@@ -66,12 +69,11 @@
 				display: flex;
 				position: absolute;
 				right: 17px;
-				top: 83px;
+				top: 85px;
 			}
 		}
 	}
 }
-
 
 
 
