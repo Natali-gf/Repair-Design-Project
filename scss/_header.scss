@@ -14,11 +14,7 @@
 	}
 	&__navigation {
 		width: 572px;
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: justify;
-      -ms-flex-pack: justify;
 		justify-content: space-between;
 		&_link:hover {
 			color: $gold;
@@ -29,25 +25,15 @@
 		}
 	}
 	&__phone {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
 		color: $gold;
 		text-decoration: underline;
-		-webkit-box-pack: end;
-      -ms-flex-pack: end;
 		justify-content: flex-end;
 		width: 203px;
 	}
 	&__button {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: center;
-      -ms-flex-pack: center;
 		justify-content: center;
-		-webkit-box-align: center;
-      -ms-flex-align: center;
 		align-items: center;
 		height: 37px;
 		width: 161px;
@@ -66,12 +52,7 @@
 				margin-bottom: 245px;
 			}
 			.toolbar__navigation {
-				display: -webkit-box;
-				display: -ms-flexbox;
 				display: flex;
-				-webkit-box-orient: vertical;
-				-webkit-box-direction: normal;
-				-ms-flex-direction: column;
 				flex-direction: column;
 				position: absolute;
 				left: 0;
@@ -79,18 +60,12 @@
 				padding: 10px 25px 30px;
 				gap: 40px;
 				width: 100%;
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(64%, #131313), to(rgba(0, 0, 0, 0.1)));
-				background: -o-linear-gradient(top, #131313 64%, rgba(0, 0, 0, 0.1) 100%);
 				background: linear-gradient(to bottom, $background 64%, rgba(0, 0, 0, 0.1) 100%);
 				@media (max-width: $maxw-ipad) {
-					background: -webkit-gradient(linear, left top, left bottom, color-stop(74%, #131313), to(rgba(0, 0, 0, 0.1)));
-					background: -o-linear-gradient(top, #131313 74%, rgba(0, 0, 0, 0.1) 100%);
 					background: linear-gradient(to bottom, $background 74%, rgba(0, 0, 0, 0.1) 100%);
 				}
 			}
 			.toolbar__button {
-				display: -webkit-box;
-				display: -ms-flexbox;
 				display: flex;
 				position: absolute;
 				right: 17px;
