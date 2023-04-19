@@ -5,9 +5,15 @@
 	&__content {
 		margin: 0 auto;
 		padding: 175px 0 92px;
+		-webkit-box-pack: end;
+      -ms-flex-pack: end;
 		justify-content: flex-end;
 		@media screen and (max-width: $maxw-ipad) {
+			-webkit-box-pack: start;
+         -ms-flex-pack: start;
 			justify-content: flex-start;
+			-webkit-box-align: center;
+         -ms-flex-align: center;
 			align-items: center;
 			text-align: center;
 		}
@@ -33,10 +39,13 @@
 		}
 	}
 	&__tabs {
+		-ms-flex-item-align: end;
 		align-self: flex-end;
 		position: absolute;
 		@media screen and (max-width: $maxw-ipad) {
 			position: relative;
+			-ms-flex-item-align: center;
+         -ms-grid-row-align: center;
 			align-self: center;
 		}
 	}
@@ -131,7 +140,10 @@
 
 .parameters {
 	max-width: 445px;
+	display: -webkit-box;
+   display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	&__box {
 		width: 190px;
@@ -166,12 +178,16 @@
 // todo __Third section__ //
 
 .control {
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(67.5%, transparent), color-stop(33.5%, #131313));
+   background: -o-linear-gradient(bottom, transparent 67.5%, #131313 33.5%);
 	background: linear-gradient(to top, transparent 67.5%, $background 33.5%);
 	@media screen and (max-width: $maxw-mobile) {
 		background: $background;
 	}
 	&__content {
 		margin: 0 auto;
+		-webkit-box-align: center;
+      -ms-flex-align: center;
 		align-items: center;
 		padding: 0 17px 0 18px;
 	}
@@ -187,9 +203,13 @@
 		}
 	}
 	&__player {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		width: 817px;
 		height: 434px;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(../images/background-image-play-video.png);
+      background-image: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/background-image-play-video.png);
 		background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/background-image-play-video.png);
 		&::after {
 			content: '';
@@ -247,7 +267,11 @@
 
 .contact-form {
 	&__block {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-pack: center;
+      -ms-flex-pack: center;
 		justify-content: center;
 		height: 103px;
 	}
@@ -264,7 +288,10 @@
 		}
 	}
 	&__checkbox {
+		-ms-flex-item-align: end;
 		align-self: flex-end;
+		-webkit-box-align: center;
+      -ms-flex-align: center;
 		align-items: center;
 		position: absolute;
 		@media screen and (max-width: $maxw-mobile) {
@@ -282,6 +309,9 @@
 	@media screen and (max-width: $maxw-mobile){
 		width: 100%;
 		&__block {
+			-webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -ms-flex-direction: column;
 			flex-direction: column;
 			height: auto;
 		}
@@ -311,7 +341,12 @@
 .input {
 	height: 25px;
 	width: 231px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
 	flex-direction: column;
 	outline: none;
 	border-bottom: 1px Solid
@@ -321,14 +356,22 @@
 	}
 }
 .check {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	&__box {
 		display: none;
 	}
 
 	&__mark {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-pack: center;
+      -ms-flex-pack: center;
 		justify-content: center;
+		-webkit-box-align: center;
+      -ms-flex-align: center;
 		align-items: center;
 		height: 18px;
 		width: 18px;
