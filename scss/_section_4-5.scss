@@ -3,13 +3,19 @@
 .repairs {
 	&__container {
 		margin: 254px auto 0;
+		-webkit-box-align: end;
+      -ms-flex-align: end;
 		align-items: flex-end;
+		-webkit-box-pack: center;
+      -ms-flex-pack: center;
 		justify-content: center;
+		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		gap: 30px;
 		padding: 0 17px 0 18px;
 	}
 	&__title {
+		-ms-flex-item-align: start;
 		align-self: flex-start;
 		position: absolute;
 		text-align: center;
@@ -37,6 +43,7 @@
 	gap: 30px;
 	&__detail {
 		width: 84.2%;
+		-webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 		background: white;
 		position: relative;
@@ -56,7 +63,11 @@
 	&__list {
 		padding: 0 31px 47px;
 		& li {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
 			gap: 5px;
 			&::before {
@@ -70,15 +81,21 @@
 		}
 	}
 	&__price {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-pack: center;
+      -ms-flex-pack: center;
 		justify-content: center;
+		-webkit-box-align: center;
+      -ms-flex-align: center;
 		align-items: center;
 		width: 228px;
 		height: 54px;
 		background-color: $gold;
 		color: $text-w;
-		box-shadow: 5px 5px 10px
-		rgba(227, 184, 115, 0.3);
+		-webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+		box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 		font-style: normal;
 		position: absolute;
 		margin-top: -27px;
@@ -96,7 +113,11 @@
 	&__content {
 		height: 725px;
 		margin: 0 auto 242px;
+		-webkit-box-align: center;
+      -ms-flex-align: center;
 		align-items: center;
+		-webkit-box-pack: end;
+      -ms-flex-pack: end;
 		justify-content: flex-end;
 		padding: 0 17px;
 	}
@@ -104,8 +125,15 @@
 		height: 506px;
 		max-width: 330px;
 		padding-left: 65px;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+		-webkit-box-pack: justify;
+      -ms-flex-pack: justify;
 		justify-content: space-between;
 		counter-reset: li;
 		& li::before {
@@ -116,12 +144,19 @@
 			line-height: 25px;
 			color: white;
 			background: $gold;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
 			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
 			height: 42px;
 			width: 42px;
 			border: 8px solid #fff;
+			-webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
 			box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
 			border-radius: 50%;
 			position: absolute;
@@ -131,7 +166,11 @@
 	&__item {
 		@include text (14px, 19px, $text-dark);
 		height: 60px;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
 	}
 	&__contact-form {
@@ -145,18 +184,29 @@
 		}
 	}
 	&__saving {
+		-ms-flex-item-align: end;
 		align-self: flex-end;
 		@include text (18px, 26px, $gold);
 		position: absolute;
 		height: 72px;
 		width: 220px;
 		margin-right: 180px;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
 		&::before {
 			content: url(../images/icons/icon_pig-bank.svg);
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
 			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
 			height: 72px;
 			width: 72px;
@@ -176,8 +226,13 @@
 		margin: 28px auto 12px;
 	}
 	&__block_column {
-		flex-direction: column;
-		justify-content: flex-start;
+		-webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
 		padding: 27px 49px;
 	}
 	&__input_dark {
@@ -195,6 +250,8 @@
 		}
 	}
 	&__checkbox_place {
+		-ms-flex-item-align: normal;
+		-ms-grid-row-align: normal;
 		align-self: normal;
 		position: relative;
 		margin: 16px 0 39px;
@@ -202,9 +259,15 @@
 	&__button_size {
 		width: 213px;
 		padding: 19px 0;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
 		margin-left: 200px;
 	}
 }

@@ -1,12 +1,18 @@
 // todo __Main (first) section__
 
 .main-section {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	height: 708px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../images/main-image-background.png);
+	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/main-image-background.png);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/main-image-background.png);
 	background-size: cover;
 	background-position: center center;
 	@media screen and (max-width: $maxw-mobile) {
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../images/main-image-background-mobile.png);
+		background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/main-image-background-mobile.png);
 		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/main-image-background-mobile.png);
 		height: 476px;
 	}
@@ -46,8 +52,13 @@
 		}
 	}
 	&__button-block {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		@media screen and (max-width: $maxw-mobile) {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
 			flex-direction: column;
 		}
 	}
@@ -55,6 +66,7 @@
 		width: 207px;
 		height: 51px;
 		background-color: rgba(0, 0, 0, 0);
+		-webkit-box-shadow: none;
 		box-shadow: none;
 		border: 1px solid #FFFFFF;
 		margin: 0 20px 26px 0;
