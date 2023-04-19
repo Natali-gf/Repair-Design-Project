@@ -1,18 +1,11 @@
 // todo __Eighth section__
 
 .contacts {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(3.47%, rgba(10, 10, 10, 0.904)), to(rgba(16, 16, 16, 0.856))), url(../images/background-image_6.png);
-   background: -o-linear-gradient(rgba(10, 10, 10, 0.904) 3.47%, rgba(16, 16, 16, 0.856)), url(../images/background-image_6.png);
 	background: linear-gradient(rgba(10, 10, 10, 0.904) 3.47%, rgba(16, 16, 16, 0.856)), url(../images/background-image_6.png);
 	background-size: cover;
 	background-position: center center;
 	&__content {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-ms-flex-direction: column;
 		flex-direction: column;
-		-webkit-box-align: center;
-      -ms-flex-align: center;
 		align-items: center;
 		margin: 0 auto;
 		padding: 0 17px 0 18px;
@@ -36,8 +29,6 @@
 		font-family: inherit;
 	}
 	&__links {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
 		gap: 15px;
 		margin: 26px 0 40px;
@@ -45,14 +36,8 @@
 	&__mail {
 		&::after {
 			content: url(../images/icons/icon_mail.svg);
-			display: -webkit-box;
-			display: -ms-flexbox;
 			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
 			justify-content: center;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
 			align-items: center;
 			height: 28px;
 			width: 28px;
@@ -63,14 +48,8 @@
 	&__insta {
 		&::after {
 			content: url(../images/icons/icon_insta.svg);
-			display: -webkit-box;
-			display: -ms-flexbox;
 			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
 			justify-content: center;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
 			align-items: center;
 			height: 28px;
 			width: 28px;
@@ -92,16 +71,12 @@
 			height: 100%;
 		}
 		&__adress {
-			-webkit-box-ordinal-group: 3;
-         -ms-flex-order: 2;
 			order: 2;
 			font-size: 18px;
 			line-height: 24px;
 		}
 		&__links
 		{
-			-webkit-box-ordinal-group: 3;
-         -ms-flex-order: 2;
 			order: 2;
 		}
 	}
@@ -132,7 +107,6 @@
 			position: absolute;
 			top: 45px;
 			right: 182px;
-			-ms-flex-item-align: start;
 			align-self: flex-start;
 		};
 	}
