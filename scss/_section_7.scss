@@ -1,0 +1,130 @@
+// todo __Seventh section__
+
+.clients {
+	background-image: url(../images/background-image_5.svg);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	@media screen and (max-width: $maxw-mobile) {
+		display: none;
+	}
+	&__content {
+		flex-direction: column;
+		align-items: center;
+		margin: 110px auto 0;
+	}
+	&__container {
+		text-align: center;
+	}
+	&__title {
+		display: inline-block;
+		&::after {
+			content: '';
+			background: url(../images/icons/icon_line.svg) 20% / 33px 28px no-repeat, url(../images/icons/icon_hands.svg) 50% / 33px no-repeat, url(../images/icons/icon_line.svg) 80% / 33px 28px no-repeat;
+			display: block;
+			height: 35px;
+			width: 213px;
+			margin-top: 12px;
+		}
+	}
+	&__description {
+		max-width: 370px;
+		@include text (18px, 29px, $text-dark);
+		margin: 25px 0 39px;
+	}
+	&__comments {
+		gap: 54px;
+		margin-bottom: 354px;
+	}
+}
+
+.comment {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	&__block {
+		background-color: white;
+		max-width: 325px;
+		height: 428px;
+		box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.03);
+		padding: 0 31px 0 20px;
+		position: relative;
+
+	}
+
+	&__client {
+		margin: 24px 0;
+	}
+
+	&__text {
+		line-height: 23px;
+	}
+
+	&__data {
+		width: 293px;
+		height: 54px;
+		background-color: $gold;
+		color: $text-w;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		margin-bottom: -27px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		box-shadow: 5px 5px 20px
+		rgba(227, 184, 115, 0.5);
+		font-size: 17px;
+		line-height: 24px;
+
+		&::before {
+			content: '';
+			display: block;
+			height: inherit;
+			width: 1px;
+			background-color: $text-w;
+			position: absolute;
+			left: 135px;
+		}
+	}
+
+	&__square {
+		width: 135px;
+		padding-left: 55px;
+		position: relative;
+		&::before {
+			content: url(../images/icons/icon_square.svg);
+			position: absolute;
+			margin: -3px -45px;
+		}
+	}
+
+	&__time {
+		width: 158px;
+		padding-left: 55px;
+		position: relative;
+		// margin: 100px;
+		&::before {
+			content: url(../images/icons/icon_note.svg);
+			position: absolute;
+			margin: -3px -45px;
+
+		}
+	}
+}
+.client {
+	display: flex;
+	align-items: center;
+	&__photo {
+		border-radius: 50%;
+		margin-right: 20px;
+	}
+
+	&__name {
+		@include text (18px,22px, $heading);
+		text-transform: capitalize;
+		max-width: 200px;
+	}
+}
+
+
+

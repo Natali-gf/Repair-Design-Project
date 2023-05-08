@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<link href="./css/style.css" rel="stylesheet" type="text/css">
 	<meta name="description" content="About repair of rooms, houses">
 	<meta name="keywords" content="repair of room, repair of house, renovation in style, repair in Sochi, repair in Rostov-on-Don">
@@ -86,19 +86,11 @@
 				<p class="projects__text">
 					Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families
 				</p>
-				<div class="tabs projects__tabs">
-					<h3 class="title tabs__name" tabindex="12" active>
-						Rostov-on-Don, Admiral
-					</h3>
-					<h3 class="title tabs__name" tabindex="13">
-						Sochi Thieves
-					</h3>
-					<h3 class="title tabs__name" tabindex="14">
-						Rostov-on-Don Patriotic
-					</h3>
-					<div class="tabs__image-block">
-						<img class="tabs__image-block_image" src="./images/image-section_1.png" alt="two armchairs near a large window, a coffee table, curtains">
-						<img class="tabs__image-block_image-mobile" src="./images/image-section_1-mobile.png" alt="Division of the room into two zones: a dining room and a recreation area">
+				<div id="repairTabs" class="tabs projects__tabs">
+					
+					<div id="repairImage" class="tabs__image-block">
+						<!-- Я считаю что нужно оставить картинку в html-теге, так как можно добавить симантическое описание в "alt", что может быть важной частью в данном случае, как описание ремонта -->
+						<!-- <img class="tabs__image-block_image" src="" alt=""> -->
 					</div>
 				</div>
 				<div class="parameters projects__parameters">
@@ -107,8 +99,8 @@
 							City:
 						</h3>
 						<p class="parameters__text">
-							Rostov-on-Don <br>
-							LCD admiral
+							<!-- Rostov-on-Don <br>
+							LCD admiral -->
 						</p>
 					</div>
 					<div class="parameters__box">
@@ -116,7 +108,7 @@
 							apartment area:
 						</h3>
 						<p class="parameters__text">
-							81 m2
+							<!-- 81 m2 -->
 						</p>
 					</div>
 					<div class="parameters__box">
@@ -124,7 +116,7 @@
 							Repair time:
 						</h3>
 						<p class="parameters__text">
-							23.5 months
+							<!-- 23.5 months -->
 						</p>
 					</div>
 					<div class="parameters__box">
@@ -132,17 +124,14 @@
 							Repair Cost:
 						</h3>
 						<p class="parameters__text">
-							Upon request
+							<!-- Upon request -->
 						</p>
 					</div>
 				</div>
-				<div class="projects__arrows">
-					<svg width="206px" height="14px">
-						<path d="M0 7 L40.51 7 M7.59 13.64 L0 7 L7.59 0.36 M165.49 7 L206 7 M198.41 0.36 L206 7 L198.41 13.64" stroke="white" stroke-width="2" />
-						<circle cx="74.795" cy="7" r="4.785" fill="white"/>
-						<circle cx="101.905" cy="7" r="4.785" fill="#FFFFFF4D"/>
-						<circle cx="129.015" cy="7" r="4.785" fill="#FFFFFF4D"/>
-					</svg>
+				<div class="projects__nav">
+					<button id="arrowBack" class="projects__nav_button projects__nav_button_back"></button>
+					<div class="projects__nav_dot"></div>
+					<button id="arrowNext" class="projects__nav_button projects__nav_button_next"></button>
 				</div>
 			</div>
 		</section>
@@ -519,5 +508,6 @@
 			</button>
 		</div>
 	</footer>
+	<script type="module" src="/js/slider.js"></script>
 </body>
 </html>

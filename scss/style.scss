@@ -8,11 +8,15 @@
     src: url(../fonts/NunitoSans-Regular.ttf);
 }
 
+@import "_reset";
 @import "_variables";
 @import "_general";
 @import "_header";
 @import "_main-section";
-@import "_section_2-3";
-@import "_section_4-5";
-@import "_section_6-7";
+@import "_section_2";
+@import "_section_3";
+@import "_section_4";
+@import "_section_5";
+@import "_section_6";
+@import "_section_7";
 @import "_section_8";
