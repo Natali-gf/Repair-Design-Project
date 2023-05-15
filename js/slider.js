@@ -93,37 +93,26 @@ function showDataSlide(index) {
 
 //switch slide with buttons
 function switchSlide(e) {
+	//remove class on button click
+		removeCurrentClass(index,
+							dots, 'switch__dot_active',
+							tabsTitle, 'tabs__name_active');
 	//behaviour Next buttons
 		if (e.target == arrowNext || e.target == arrowNextMobile) {
 			if (index === repairs.length - 1){
-				removeCurrentClass(index,
-									dots, 'switch__dot_active',
-									tabsTitle, 'tabs__name_active');
-
 				index = 0;
-				showDataSlide(index);
 			} else {
-				removeCurrentClass(index,
-									dots, 'switch__dot_active',
-									tabsTitle, 'tabs__name_active');
 				index++;
-				showDataSlide(index);
 			}
 		}
 	//behaviour Back buttons
 		else if (e.target == arrowBack || e.target == arrowBackMobile) {
 			if (index === 0) {
-				removeCurrentClass(index,
-									dots, 'switch__dot_active',
-									tabsTitle, 'tabs__name_active');
 				index = repairs.length - 1;
-				showDataSlide(index);
 			} else {
-				removeCurrentClass(index,
-									dots, 'switch__dot_active',
-									tabsTitle, 'tabs__name_active');
 				index--;
-				showDataSlide(index);
 			}
 		}
+	//show another slide
+		showDataSlide(index);
 }

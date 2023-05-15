@@ -21,8 +21,8 @@ const repairsData = [
 	},
 	{
 		id: '03',
-		titleTab: 'Patriotic',
-		city: 'Patriotic',
+		titleTab: 'Rostov-on-Don Patriotic',
+		city: 'Rostov-on-Don Patriotic',
 		square: '93 m2',
 		time: '3 months',
 		cost: 'Upon request',
