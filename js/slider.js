@@ -1,47 +1,129 @@
 import { repairs } from "./data.js";
+import { removeCurrentClass, removeAllCurrentClass} from "./helpers.js";
 
-const arrowBack = document.getElementById('arrowBack');
-const arrowNext = document.getElementById('arrowNext');
-const repairTabs = document.getElementById('repairTabs');
-const repairImage = document.getElementById('repairImage');
-const repairDetails = document.querySelectorAll('.parameters__text');
+//*variables
+	//constans DOM
+	const arrowBack = document.getElementById('arrowBack');
+	const arrowNext = document.getElementById('arrowNext');
+	const arrowBackMobile = document.getElementById('arrowBackMobile');
+	const arrowNextMobile = document.getElementById('arrowNextMobile');
+	const repairTabs = document.getElementById('repairTabs');
+	const repairImage = document.getElementById('repairImage');
+	const repairDetails = document.querySelectorAll('.parameters__text');
+	const repairSwitch = document.getElementById('repairSwitch');
 
-arrowNext.onclick = counterNextSlide;
-arrowBack.onclick = counterPreviousSlide;
-let index = 0;
+	//variables of data array
+	let index = 0;
+	let paramCity = repairDetails[0];
+	let paramSquare = repairDetails[1];
+	let paramTime = repairDetails[2];
+	let paramCost = repairDetails[3];
 
+	//create DOM elements and nodes
+		createElements()
 
+	//constans from created elements
+	const dots = document.querySelectorAll('.switch__dot');
+	const tabsTitle = document.querySelectorAll('.tabs__name');
 
-repairs.forEach(element => {
-	console.log(element.titleTab);
-	let tabsTemplate =
-		`<h3 class="title tabs__name">${element.titleTab}</h3>`
-		repairTabs.innerHTML +=tabsTemplate;
-})
+	//show all slide elements
+		showDataSlide(index)
 
-function counterNextSlide() {
-	if (index === repairs.length - 1) {
-		index = -1;
-	}
-	index++;
-	showSlide();
+	//behaviour of buttons
+		arrowNext.addEventListener('click', switchSlide)
+		arrowBack.addEventListener('click', switchSlide)
+		arrowBackMobile.addEventListener('click', switchSlide)
+		arrowNextMobile.addEventListener('click', switchSlide)
+
+//*functions
+//create DOM elements and nodes
+function createElements() {
+	repairs.forEach((element, index) => {
+		//create Title tabs
+			let tab = document.createElement('h3');
+			let tabTitle = document.createTextNode(element.titleTab);
+				repairTabs.prepend(tab);
+				tab.classList = 'title tabs__name';
+				tab.id = `tabTitles${index}`;
+				tab.append(tabTitle);
+				repairTabs.insertBefore(tab, repairImage);
+
+		//create dots navigation
+			let dot = document.createElement('div');
+				dot.classList = 'switch__dot';
+				dot.id = `dot${index}`;
+				repairSwitch.insertBefore(dot, arrowNext);
+
+		//set event on created elements
+				tab.onclick = (e) => {
+					removeAllCurrentClass(tabsTitle, 'tabs__name_active')
+					removeAllCurrentClass(dots, 'switch__dot_active')
+					showDataSlide(index)
+				};
+				dot.onclick = (e) => {
+					removeAllCurrentClass(dots, 'switch__dot_active')
+					removeAllCurrentClass(tabsTitle, 'tabs__name_active')
+					showDataSlide(index)
+				};
+		}
+	)
 }
 
-function counterPreviousSlide() {
-	if (index === 0) {
-		index = repairs.length;
-	}
-	index--;
-	showSlide();
+//show slide data on page
+function showDataSlide(index) {
+	//show repair image
+		let imageTemplate =
+				`<img
+					class="tabs__image-block_image"
+					src=${repairs[index].srcImage}
+					alt=${repairs[index].altImage}
+					width="100%">`;
+			repairImage.innerHTML = imageTemplate;
+
+	//fill repair details
+			paramCity.innerHTML = repairs[index].city;
+			paramSquare.innerHTML = repairs[index].square;
+			paramTime.innerHTML = repairs[index].time;
+			paramCost.innerHTML = repairs[index].cost;
+
+	// set active class
+			dots[index].classList.add('switch__dot_active');
+			tabsTitle[index].classList.add('tabs__name_active')
 }
 
-showSlide();
-function showSlide() {
-	let imageTemplate =
-		`<img class="tabs__image-block_image" src=${repairs[index].srcImage} alt="">`;
-		repairImage.innerHTML = imageTemplate;
-		repairDetails[0].innerHTML = repairs[index].city;
-		repairDetails[1].innerHTML = repairs[index].square;
-		repairDetails[2].innerHTML = repairs[index].time;
-		repairDetails[3].innerHTML = repairs[index].cost;
-};
+//switch slide with buttons
+function switchSlide(e) {
+	//behaviour Next buttons
+		if (e.target == arrowNext || e.target == arrowNextMobile) {
+			if (index === repairs.length - 1){
+				removeCurrentClass(index,
+									dots, 'switch__dot_active',
+									tabsTitle, 'tabs__name_active');
+
+				index = 0;
+				showDataSlide(index);
+			} else {
+				removeCurrentClass(index,
+									dots, 'switch__dot_active',
+									tabsTitle, 'tabs__name_active');
+				index++;
+				showDataSlide(index);
+			}
+		}
+	//behaviour Back buttons
+		else if (e.target == arrowBack || e.target == arrowBackMobile) {
+			if (index === 0) {
+				removeCurrentClass(index,
+									dots, 'switch__dot_active',
+									tabsTitle, 'tabs__name_active');
+				index = repairs.length - 1;
+				showDataSlide(index);
+			} else {
+				removeCurrentClass(index,
+									dots, 'switch__dot_active',
+									tabsTitle, 'tabs__name_active');
+				index--;
+				showDataSlide(index);
+			}
+		}
+}
